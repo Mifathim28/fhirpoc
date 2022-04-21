@@ -15,6 +15,7 @@
 
 		<app.runtime>4.4.0-20220221</app.runtime>
 		<mule.maven.plugin.version>3.5.4</mule.maven.plugin.version>
+		<sonar.sources>src/</sonar.sources>
 	</properties>
 
 	<build>
@@ -29,6 +30,19 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+				<cloudHubDeployment>
+					<uri>https://anypoint.mulesoft.com</uri>
+					<muleVersion>4.4.0</muleVersion>
+					<username>mis19bah</username>
+					<password>Misbah@28</password>
+					<applicationName>fhir-mfathima</applicationName>
+					<environment>Sandbox</environment>
+					<workers>1</workers>
+					<workerType>Micro</workerType>
+					<objectStoreV2>true</objectStoreV2>
+				</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
